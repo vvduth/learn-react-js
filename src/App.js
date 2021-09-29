@@ -9,12 +9,12 @@ const App = () => {
       id: 'e1',
       title: 'Car Insurance', 
       amount : 126.98, 
-      date: new Date(2021,5,27)},
+      date: new Date(2019,5,27)},
     {
       id: 'e2',
       title: 'Toilet Paper', 
       amount : 25.98, 
-      date: new Date(2021,3,27),
+      date: new Date(2020,3,27),
     },
     {
       id: 'e3',
@@ -29,13 +29,21 @@ const App = () => {
       date: new Date(2021,9,17), 
     },
   ]
+
+  const addExpenseHandler = expense => {
+    console.log('In app.js');
+    console.log(expense);
+  }
   return (
     <div>
-       <NewExpense/>
+       <NewExpense onAddExpense = {addExpenseHandler}/>
        <Expenses items={expenses}/>
 
     </div>
   );
 }
+
+//no communication between 2 child compos, in this case is expenses and new expense
+//pass the prop/state from one child to parent and from parent pass it to the others child
 
 export default App;
