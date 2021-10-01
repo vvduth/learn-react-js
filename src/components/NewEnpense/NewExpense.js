@@ -1,7 +1,10 @@
-
+import React,{useStates} from 'react';
 import './NewExpense.css'
 import ExpenseForm from './ExpenseForm';
 const NewExpense = (props) => {
+
+    
+        
     const saveExpenseDatahandler = (enteredExpenseData) => {
         const expenseData = {
             ...enteredExpenseData,
@@ -17,6 +20,7 @@ const NewExpense = (props) => {
             <div className='new-expense'>
                 <ExpenseForm onSaveExpenseData = {saveExpenseDatahandler}/>
             </div>
+            //JSX
        
     );
 };
